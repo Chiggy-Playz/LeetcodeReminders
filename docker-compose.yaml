@@ -3,10 +3,16 @@ services:
     container_name: leetcode_reminders_backend
     build:
       context: backend
+    networks:
+     - genesis_network
+
   frontend:
     container_name: leetcode_reminders_frontend
     build:
       context: frontend
+    networks:
+    - genesis_network
+
 
 networks:
   genesis_network:
